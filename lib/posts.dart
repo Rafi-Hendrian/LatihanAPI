@@ -13,8 +13,8 @@ class PostsPage extends StatelessWidget {
           "Posts",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 14, 197, 29),
+        centerTitle: false, // Mengubah teks "Posts" ke kiri
+        backgroundColor: Color.fromARGB(255, 237, 238, 237),
       ),
       body: FutureBuilder<List<Post>>(
         future: httpService.getPosts(),
@@ -42,7 +42,7 @@ class PostsPage extends StatelessWidget {
                   ),
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: Color.fromARGB(255, 16, 223, 95),
+                      backgroundColor: Color.fromARGB(255, 104, 86, 60),
                       child: Text(
                         post.userId.toString(),
                         style: const TextStyle(color: Colors.white),
